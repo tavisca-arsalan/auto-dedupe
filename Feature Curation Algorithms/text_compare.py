@@ -1,5 +1,6 @@
 import math
 from nltk.util import ngrams
+from stringdist import levenshtein
 
 
 def compute_jaccard_index(set_1, set_2):
@@ -81,3 +82,6 @@ def calculate_three_gram_name_similarity(text1,text2):
     score = compute_jaccard_index(set1,set2)
     return score
 
+
+def calculate_levenshtein_distance(str1,str2):
+    return levenshtein(str1, str2)
